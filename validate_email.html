@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Validate email</title>
+</head>
+<body>
+<div>
+    <label>Nhập địa chỉ email</label>
+    <input type="text" value ="" id = "email"  onchange="validate()" />
+ </div>
+
+<script>
+    function validate() {
+        var path =/^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.com,.net,.org\.[A-Za-z0-9]+)$/;
+        var email = document.getElementById('email').value;
+        var result = path.test(email);
+        if(result = true) {
+            alert('email hợp lệ');
+        }
+        else{
+            alert('email không hợp lệ');
+        }
+    }
+</script>
+</body>
+</html>
